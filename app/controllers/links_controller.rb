@@ -1,5 +1,6 @@
 class LinksController < ApplicationController
 	def index
+		@links = Link.hottest_first
 	end
 
 	def show

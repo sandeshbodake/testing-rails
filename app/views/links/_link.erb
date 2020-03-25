@@ -1,0 +1,7 @@
+<%= link_to link.url do %>
+  <%= link.title %>
+
+  <% if link.image? %>
+    <%= image_tag link.url %>
+  <% end %>
+<% end %>
