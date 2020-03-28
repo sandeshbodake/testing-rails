@@ -5,11 +5,14 @@ RSpec.describe "GET /api/v1/links" do
 		coldest_link = create(:link)
 		hottest_link = create(:link, upvotes: 2)
 
-		get 'api/v1/links'
+		get '/api/v1/links'
 
-		expect(json_body['links'].count).to eq(2)
+		json_body = JSON.parse(response.body)
 
-		hottest_link_json = json_body['links'][0]
+		# JSON.parse(response.body)
+
+		expect(json_body.count).to eq(2)
+		hottest_link_json = json_body[0]
 
 		expect(hottest_link_json).to eq({
 			id: hottest_link.id,
