@@ -9,7 +9,7 @@ class Score
   end
 
   def value
-    upvotes.to_i - downvotes.to_i
+    upvotes - downvotes
   end
 
   def controversial?
