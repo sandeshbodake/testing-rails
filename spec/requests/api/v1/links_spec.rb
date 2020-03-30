@@ -22,7 +22,7 @@ end
 
 RSpec.describe 'POST /api/v1/links' do
   it 'create new link' do
-  	link_params = attributes_for(:link)
+  	link_params = attributes_for(:link) # attributes_for is a factory-girl method
 
   	post "/api/v1/links", link: link_params
 

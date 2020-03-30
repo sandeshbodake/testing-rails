@@ -11,6 +11,7 @@ class LinksController < ApplicationController
 		@link = Link.new(link_params)
 
     if @link.save
+    	LinkMailer.new_link(@link)
       redirect_to @link
     else
       render :new
