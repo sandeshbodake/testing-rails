@@ -28,7 +28,7 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
-      - name: Install Ruby version specified in `.ruby-version`
+      - name: Install Ruby version specified in 2.3.1
         uses: eregon/use-ruby-action@master # this will use by default the .ruby-version file in your repository
       - name: Install required apt packages
         run: |
@@ -38,9 +38,6 @@ jobs:
         with:
           path: vendor/bundle
           key: ${{ runner.os }}-gem-use-ruby-${{ hashFiles('**/Gemfile.lock') }}
-      - name: Read Node.js version to install from `.nvmrc`
-        run: echo "##[set-output name=NVMRC;]$(cat .nvmrc)"
-        id: nvm
       - name: Bundle install
         run: |
           bundle config path vendor/bundle
