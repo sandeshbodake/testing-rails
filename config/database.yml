@@ -24,3 +24,10 @@ test:
   username: postgres
   password: postgres
 
+production:
+  adapter: postgresql
+  encoding: unicode
+  database: sample_postgres_test
+  pool: 5
+  username: postgres
+  password: postgres
