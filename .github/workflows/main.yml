@@ -1,8 +1,8 @@
 # workflow name
-name: CI
+name: CI/CD
 on: [push, pull_request]
 jobs:
-  test:
+  build:
     runs-on: ubuntu-latest
     services:
       db:
