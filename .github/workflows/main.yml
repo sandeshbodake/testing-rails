@@ -56,5 +56,6 @@ jobs:
           aws_secret_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           application_name: testing-rails
           environment_name: staging
+          version_label: 2
           region: ap-south-1
           deployment_package: deploy.zip
