@@ -57,5 +57,5 @@ jobs:
           application_name: testing-rails
           environment_name: staging
           version_label: 1
-          region: us-west-2
+          region: ap-south-1
           deployment_package: deploy.zip
