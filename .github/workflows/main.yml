@@ -59,4 +59,3 @@ jobs:
           use_existing_version_if_available: true
           version_label: 2
           region: ap-south-1
-          deployment_package: deploy.zip
