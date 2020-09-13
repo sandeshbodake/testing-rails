@@ -58,3 +58,4 @@ jobs:
           environment_name: staging
           version_label: 3
           region: ap-south-1
+          deployment_package: deploy.zip
